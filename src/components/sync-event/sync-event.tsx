@@ -10,7 +10,7 @@ interface Props {
 
 export const SyncEvent: React.FC<Props> = (props) => {
     const {data, loading, error} = useQuery(ACTION_ITEMS_QUERY);
-    if (loading) return 'Loading...';
+    if (loading) return <pre>'Loading...'</pre>;
     if (error) return <pre>{error.message}</pre>
 
     const {syncEvent} = data;

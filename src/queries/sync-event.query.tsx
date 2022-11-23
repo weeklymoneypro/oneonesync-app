@@ -19,4 +19,3 @@ export const ACTION_ITEMS_QUERY = gql`
         }
     }
 `
-

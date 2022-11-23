@@ -1,10 +1,9 @@
 import React from 'react';
 import { ActionItemType } from '../../types/action-item.type';
-
 import { useMutation } from '@apollo/client';
 
 import { ACTION_ITEMS_QUERY } from '../../queries/sync-event.query';
-import {RESOLVE_ACTION_ITEM_MUTATION} from "../../mutations/resolve-action-item.mutation";
+import { RESOLVE_ACTION_ITEM_MUTATION } from '../../mutations/resolve-action-item.mutation';
 
 interface Props {
     item: ActionItemType;
@@ -22,7 +21,11 @@ export const ActionItem: React.FC<Props> = (props) => {
     }
     return (
         <div>
-            <input type={"checkbox"} checked={props.item.resolved} onChange={e => onChange(e, props.item.id)}/>
+            <input
+                type={'checkbox'}
+                checked={props.item.resolved}
+                onChange={e => onChange(e, props.item.id)}
+            />
             {props.item.text}
         </div>
     )
